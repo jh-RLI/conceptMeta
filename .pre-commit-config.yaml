@@ -21,11 +21,14 @@ repos:
     hooks:
       - id: black
 
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
+  - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: 'v0.0.277'
+    rev: v0.8.3
     hooks:
+      # Run the linter.
       - id: ruff
+      # Run the formatter.
+      - id: ruff-format
 
   - repo: https://github.com/pycqa/isort
     rev: 5.12.0
