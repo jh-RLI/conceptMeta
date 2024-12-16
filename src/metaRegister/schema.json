@@ -1,0 +1,58 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+        "collectionVersion": {
+            "type": "string",
+            "description": "Version of the metadata collection."
+        },
+        "metadataCollection": {
+            "type": "array",
+            "description": "Collection of metadata entries.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "etlProcessName": {
+                        "type": "string",
+                        "description": "Name of the ETL process."
+                    },
+                    "datasets": {
+                        "type": "array",
+                        "description": "List of datasets related to the ETL process.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "datasetId": {
+                                    "type": "string",
+                                    "description": "Identifier of the dataset."
+                                },
+                                "version": {
+                                    "type": "string",
+                                    "description": "Version of the dataset."
+                                },
+                                "metadataDocument": {
+                                    "type": "string",
+                                    "description": "Reference to the metadata document for the dataset."
+                                }
+                            },
+                            "required": [
+                                "datasetId",
+                                "version",
+                                "metadataDocument"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "etlProcessName",
+                    "datasets"
+                ]
+            }
+        }
+    },
+    "required": [
+        "collectionVersion",
+        "metadataCollection"
+    ],
+    "additionalProperties": false
+}

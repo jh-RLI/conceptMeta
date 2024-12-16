@@ -1,0 +1,28 @@
+{
+    "@context": {
+        "@vocab": "http://example.org/schema/",
+        "collectionVersion": "http://example.org/schema/collectionVersion",
+        "metadataCollection": "http://example.org/schema/metadataCollection",
+        "etlProcessName": "http://example.org/schema/etlProcessName",
+        "datasets": "http://example.org/schema/datasets",
+        "datasetId": "http://example.org/schema/datasetId",
+        "version": "http://example.org/schema/version",
+        "metadataDocument": "http://example.org/schema/metadataDocument"
+    },
+    "@type": "MetadataCollection",
+    "collectionVersion": "",
+    "metadataCollection": [
+        {
+            "@type": "ETLProcess",
+            "etlProcessName": "",
+            "datasets": [
+                {
+                    "@type": "Dataset",
+                    "datasetId": "",
+                    "version": "",
+                    "metadataDocument": ""
+                }
+            ]
+        }
+    ]
+}
