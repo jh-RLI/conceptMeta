@@ -37,7 +37,9 @@ def register_etl_processes_and_create_metadata(processes: list = ETL_PROCESSES):
             / f"{process_config['metadata_storage_path']}"
             / f"{process_config['metadata_document_name']}.xml"
         )
-        save_metadata_document(metadata_document, metadata_path)
+        save_metadata_document(
+            metadata_document, file_name=process_config["metadata_document_name"]
+        )
 
         # Add to metadata register
         metadata_register.append(
