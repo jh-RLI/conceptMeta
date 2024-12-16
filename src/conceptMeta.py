@@ -6,35 +6,44 @@ to manage metadata, data to support different data versions.
 
 from xml.parse import parse_metadata
 
-from extractInspireInfoStrategy import (
+from inspire.extractInspireInfoStrategy import (
     AbstractExtractor,
     DistributionVersionExtractor,
     MetadataExtractorContext,
     TitleExtractor,
 )
-from settings import META_FILE_PATH
+from inspire.interface import register_etl_processes_and_create_metadata
+from metaRegister.manageEtlInputDatasetsMetadata import (
+    collect_metadata_path_for_etl_processes,
+)
 
 
 def main():
     print("Hello from conceptmeta!")
 
-    # Parse the metadata document
-    xml_root = parse_metadata(META_FILE_PATH)
+    staged_for_run = collect_metadata_path_for_etl_processes()
 
-    # Extract Title
-    title_extractor = TitleExtractor()
-    context = MetadataExtractorContext(title_extractor)
-    print("Title:", context.extract(xml_root))
+    for i in staged_for_run:
+        print(f"Processing ETL process {i[0]}")
+        # Parse the metadata document
+        xml_root = parse_metadata(i[1])
 
-    # Extract Abstract
-    abstract_extractor = AbstractExtractor()
-    context.set_strategy(abstract_extractor)
-    print("Abstract:", context.extract(xml_root))
+        # Extract Title
+        title_extractor = TitleExtractor()
+        context = MetadataExtractorContext(title_extractor)
+        print("Title:", context.extract(xml_root))
 
-    # Extract Distribution Version
-    version_extractor = DistributionVersionExtractor()
-    context.set_strategy(version_extractor)
-    print("Distribution Version:", context.extract(xml_root))
+        # Extract Abstract
+        abstract_extractor = AbstractExtractor()
+        context.set_strategy(abstract_extractor)
+        print("Abstract:", context.extract(xml_root))
+
+        # Extract Distribution Version
+        version_extractor = DistributionVersionExtractor()
+        context.set_strategy(version_extractor)
+        print("Distribution Version:", context.extract(xml_root))
+
+    register_etl_processes_and_create_metadata()
 
 
 if __name__ == "__main__":
