@@ -1,0 +1,15 @@
+etl_processes:  # Process scope
+  process_id: "Test"  # Unique identifier for the ETL process (string)
+  dataset_name: "test-dataset"  # Dataset name associated with the process (string)
+  metadata_document_name: "insipre-alkis-gebäude"  # Name of the metadata document (string)
+  metadata_storage_path: "case-study/fisbroker-berlin/" # Path of the metadata document (string) must be a valid filepath // may implement URL based Path
+  create_new_metadata: false  # Whether to create a new metadata document (boolean)
+  add_metadata_content_from:
+    path: "/this/path"  # Path to file or directory (string)
+    type: "file"  # Specify 'file' or 'directory'
+
+  version: "1.0.0"  # Optional version for this configuration (string)
+
+  # Future enhancements
+  # tags: [example, test]  # Optional list of tags for categorization (array of strings)
+  # description: "Description of the ETL process"  # Optional description (string)
