@@ -1,9 +1,10 @@
 # This module implements methods to extract specific information
 # form a INSPIRE metadata document
 from abc import ABC, abstractmethod
-from xml.namespaces import namespaces
 
 from lxml import etree
+
+from xmlWrap.namespaces import namespaces
 
 
 class MetadataExtractor(ABC):
