@@ -1,12 +1,13 @@
 from pathlib import Path
 
+from inspire.createNewDatasetSeries import create_inspire_metadata_document
+
 # from metaRegister.manageEtlInputDatasetsMetadata import (
 #     collect_metadata_path_for_etl_processes,
 # )
-from xml.utils import save_metadata_document
-
-from inspire.createDatasetSeries import create_inspire_metadata_document
+from metaRegister.manageEtlInputDatasetsMetadata import collect_inspire_metadata_input
 from settings import BASE_PATH, ETL_PROCESSES
+from xmlWrap.utils import save_metadata_document
 
 
 def register_etl_processes_and_create_metadata(processes: list = ETL_PROCESSES):
@@ -26,6 +27,7 @@ def register_etl_processes_and_create_metadata(processes: list = ETL_PROCESSES):
             "dataset_name": process_config["dataset_name"],
             "metadata_storage_path": process_config["metadata_storage_path"],
             "metadata_document_name": process_config["metadata_document_name"],
+            "new_inspire_metadata": collect_inspire_metadata_input(process_config),
         }
 
         # Generate the metadata XML document
