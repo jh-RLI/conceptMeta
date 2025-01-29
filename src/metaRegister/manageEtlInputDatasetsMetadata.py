@@ -26,7 +26,7 @@ def collect_metadata_path_for_etl_processes(
         set[tuple[str, Path]]: Set of tuples containing
         process ID and metadata file path.
     """
-    META_FILE_PATHS = set()
+    meta_file_paths = set()
     for process_config in processes:
         # read the process name
         etl_process_id = process_config["process_id"]
@@ -37,10 +37,11 @@ def collect_metadata_path_for_etl_processes(
             f"{process_config['metadata_document_name']}.xml"
         )
 
-        META_FILE_PATHS.add((etl_process_id, Path(BASE_PATH / metadata_file_path)))
+        meta_file_paths.add((etl_process_id, Path(BASE_PATH / metadata_file_path)))
 
-    return META_FILE_PATHS
+    return meta_file_paths
 
 
-def etl_processes_collection_metadata():
-    pass
+def collect_inspire_metadata_input(config: dict) -> dict:
+    inspire_metadata_info = config["inspire_metadata_info"]
+    return inspire_metadata_info
