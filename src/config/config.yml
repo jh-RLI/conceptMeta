@@ -9,73 +9,51 @@ etl_processes:  # Process scope
     add_metadata_content_from:
       path: /this/path  # Path to file or directory (string). use a template to create the content file. The template provides the INSPIRE metadata structure.
       type: file  # Specify 'file' or 'directory'
-    fileIdentifier: dataset-series-id-1
+    file_identifier: dataset-series-id-1
     inspire_metadata_info:
-      fileIdentifier: dataset-series-id,
+      resource_type: dataset # one of dataset, series, service
+      file_identifier: dataset-series-id,
       title: Example Dataset Title,
       abstract: This is an example abstract for a dataset.,
       keywords: [keyword1, keyword2, keyword3]
       language: eng
+      general_contact:
+        organization_name: Example Organization
+        phone: +49-30-999999-5555555
+        mail_address:
+        role: pointOfContact
+      topic_category: [geoscientificInformation, environment]
       resource_locator: https://example.com/dataset
       responsible_party:
           organisation_name: Example Organisation
           role: owner
+      spatial_resolution:
+        distance: 0.24
+        interval_distance: 0.25
+        equivalent_scale: 1000
+      resource_language: eng
       spatial_representation_type: vector
       reference_system: EPSG:4326
+      transfer_options:
+        option_1:
+         url: https://example.com/dataset
+         name: Example Datase
+        option_2:
+         url: https://example.com/dataset2
+         name: Example Datase 2
       lineage: This dataset was created by processing raw data from XYZ
       constraints:
-          access_constraints: otherRestrictions
-          use_constraints: otherRestrictions
+          use_constraints_code_list: otherRestrictions
+          access_constraints_code_list: otherRestrictions
+          other_constraints_anchor: http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a
+          other_constraints_anchor_text: INSPIRE Directive Article 13.1a
       bbox:
           west: -10.0
           east: 10.0
           south: -5.0
           north: 5.0
-
-
-    version: 1.0.0  # Version for the related dataset if not available in metadata?
-
-    # Future enhancements
-    # tags: [example, test]  # Optional list of tags for categorization (array of strings)
-    # description: Description of the ETL process  # Optional description (string)
-
-  #--------------------------------------------------------------------------------------------------------------------------------------------------------#
-
-  - process_id: test-2  # Unique identifier for the ETL process (string)
-    dataset_name: test-dataset  # Dataset name associated with the process (string)
-    metadata_document_name: insipre-alkis-gebäude  # Name of the metadata document (string)
-    metadata_storage_path: case-study/fisbroker-berlin/ # Path of the metadata document (string) must be a valid filepath // may implement URL based Path
-    create_new_metadata: false  # Whether to create a new metadata document (boolean)
-    add_metadata_content_from:
-      path: /this/path  # Path to file or directory (string)
-      type: file  # Specify 'file' or 'directory'
-    inspire_metadata_info:
-      fileIdentifier: dataset-series-id,
-      title: Example Dataset Title,
-      abstract: This is an example abstract for a dataset.,
-      keywords: [keyword1, keyword2, keyword3]
-      language: eng
-      resource_locator: https://example.com/dataset
-      responsible_party:
-          organisation_name: Example Organisation
-          role: owner
-      spatial_representation_type: vector
-      reference_system: EPSG:4326
-      lineage: This dataset was created by processing raw data from XYZ
-      constraints:
-          access_constraints: otherRestrictions
-          use_constraints: otherRestrictions
-      bbox:
-          west: -10.0
-          east: 10.0
-          south: -5.0
-          north: 5.0
-
-
-    version: 1.0.0  # Optional version for this configuration (string)
-
-    # Future enhancements
-    # tags: [example, test]  # Optional list of tags for categorization (array of strings)
-    # description: Description of the ETL process  # Optional description (string)
+      data_quality:
+        domain_conformance_result_pass: true
+        report_date_type: publication
 
   #--------------------------------------------------------------------------------------------------------------------------------------------------------#
