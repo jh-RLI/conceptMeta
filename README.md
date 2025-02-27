@@ -31,9 +31,9 @@ For pygeometa run:
 ## Technology
 
 - Python
-- lxml: To process xml data in Python
-- pygeometa: Similar to conceptMeta - a tool to generate metadata documents based on config files, supports ISO 19139 but not fully supports INSPIRE
+- [lxml](https://lxml.de/): To process xml data in Python
+- [pygeometa](https://github.com/geopython/pygeometa): Similar to conceptMeta - a tool to generate metadata documents based on config files, supports ISO 19139 but not fully supports INSPIRE
 
 Not implemented:
 
-- INSPIRE validation service (WebAPI)
+- [INSPIRE validation service](https://inspire.ec.europa.eu/validator/home/index.html) (WebAPI)
