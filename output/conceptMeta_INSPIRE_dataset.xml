@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd"
+  xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmx="http://www.isotc211.org/2005/gmx"
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:srv="http://www.isotc211.org/2005/srv"
+  xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
+  <gmd:fileIdentifier>
+    <gco:CharacterString>dataset-series-id,</gco:CharacterString>
+  </gmd:fileIdentifier>
+  <gmd:language>
+    <gmd:LanguageCode
+      codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#LanguageCode"
+      codeListValue="eng" />
+  </gmd:language>
+  <gmd:characterSet>
+    <gmd:MD_CharacterSetCode
+      codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_CharacterSetCode"
+      codeListValue="eng" />
+  </gmd:characterSet>
+  <gmd:hierarchyLevel>
+    <gmd:MD_ScopeCode
+      codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_ScopeCode"
+      codeListValue="dataset">dataset</gmd:MD_ScopeCode>
+  </gmd:hierarchyLevel>
+  <gmd:contact>
+    <gmd:CI_ResponsibleParty>
+      <gmd:organisationName>
+        <gco:CharacterString>Example Organization</gco:CharacterString>
+      </gmd:organisationName>
+      <gmd:contactInfo>
+        <gmd:CI_Contact>
+          <gmd:address>
+            <gmd:CI_Address>
+              <gmd:electronicMailAddress>
+                <gco:CharacterString />
+              </gmd:electronicMailAddress>
+            </gmd:CI_Address>
+          </gmd:address>
+        </gmd:CI_Contact>
+      </gmd:contactInfo>
+      <gmd:role>
+        <gmd:CI_RoleCode
+          codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode"
+          codeListValue="pointOfContact" />
+      </gmd:role>
+    </gmd:CI_ResponsibleParty>
+  </gmd:contact>
+  <gmd:dateStamp>
+    <gco:Date>2025-02-21</gco:Date>
+  </gmd:dateStamp>
+  <gmd:identificationInfo>
+    <gmd:MD_DataIdentification>
+      <gmd:descriptiveKeywords>
+        <gmd:MD_Keywords>
+          <gmd:thesaurusName>
+            <gmd:CI_Citation>
+              <gmd:title>
+                <gmx:Anchor xlink="https://www.eionet.europa.eu/gemet/en/inspire-themes/">GEMET -
+                  INSPIRE themes, version 1.0</gmx:Anchor>
+              </gmd:title>
+            </gmd:CI_Citation>
+          </gmd:thesaurusName>
+          <gmd:keyword>
+            <gco:CharacterString>keyword1</gco:CharacterString>
+          </gmd:keyword>
+          <gmd:keyword>
+            <gco:CharacterString>keyword2</gco:CharacterString>
+          </gmd:keyword>
+          <gmd:keyword>
+            <gco:CharacterString>keyword3</gco:CharacterString>
+          </gmd:keyword>
+        </gmd:MD_Keywords>
+      </gmd:descriptiveKeywords>
+      <gmd:spatialResolution>
+        <gmd:MD_Resolution>
+          <gmd:equivalentScale>
+            <gmd:MD_RepresentativeFraction>
+              <gmd:denominator>
+                <gco:integer>1000</gco:integer>
+              </gmd:denominator>
+            </gmd:MD_RepresentativeFraction>
+          </gmd:equivalentScale>
+        </gmd:MD_Resolution>
+      </gmd:spatialResolution>
+      <gmd:language>
+        <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng" />
+      </gmd:language>
+      <gmd:topicCategory>
+        <gmd:MD_TopicCategoryCode>geoscientificInformation</gmd:MD_TopicCategoryCode>
+      </gmd:topicCategory>
+      <gmd:topicCategory>
+        <gmd:MD_TopicCategoryCode>environment</gmd:MD_TopicCategoryCode>
+      </gmd:topicCategory>
+      <gmd:pointOfContact>
+        <gmd:CI_ResponsibleParty>
+          <gmd:organisationName>
+            <gco:CharacterString>Example Organisation</gco:CharacterString>
+          </gmd:organisationName>
+          <gmd:role>
+            <gmd:CI_RoleCode
+              codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#CI_RoleCode"
+              codeListValue="owner">owner</gmd:CI_RoleCode>
+          </gmd:role>
+        </gmd:CI_ResponsibleParty>
+      </gmd:pointOfContact>
+      <gmd:spatialRepresentationType>
+        <gmd:MD_SpatialRepresentationTypeCode
+          codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_SpatialRepresentationTypeCode"
+          codeListValue="vector">vector</gmd:MD_SpatialRepresentationTypeCode>
+      </gmd:spatialRepresentationType>
+    </gmd:MD_DataIdentification>
+    <gmd:citation>
+      <gmd:CI_Citation>
+        <gmd:title>
+          <gco:CharacterString>Example Dataset Title,</gco:CharacterString>
+        </gmd:title>
+        <gmd:date>
+          <gmd:CI_Date>
+            <gmd:date>
+              <gco:date>2013-02-21</gco:date>
+            </gmd:date>
+            <gmd:dateType>
+              <gmd:CI_DateTypeCode
+                codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode"
+                codeListValue="creation" />
+            </gmd:dateType>
+          </gmd:CI_Date>
+        </gmd:date>
+        <gmd:identifier>
+          <gmd:MD_Identifier>
+            <gmd:code>dataset-series-id,</gmd:code>
+          </gmd:MD_Identifier>
+        </gmd:identifier>
+      </gmd:CI_Citation>
+    </gmd:citation>
+    <gmd:abstract>
+      <gco:CharacterString>This is an example abstract for a dataset.,</gco:CharacterString>
+    </gmd:abstract>
+  </gmd:identificationInfo>
+  <gmd:referenceSystemInfo>
+    <gmd:MD_ReferenceSystem>
+      <gmd:referenceSystemIdentifier>
+        <gmd:RS_Identifier>
+          <gmd:code>
+            <gco:CharacterString>EPSG:4326</gco:CharacterString>
+          </gmd:code>
+        </gmd:RS_Identifier>
+      </gmd:referenceSystemIdentifier>
+    </gmd:MD_ReferenceSystem>
+  </gmd:referenceSystemInfo>
+  <gmd:lineage>
+    <gmd:LI_Lineage>
+      <gmd:statement>
+        <gco:CharacterString>This dataset was created by processing raw data from XYZ</gco:CharacterString>
+      </gmd:statement>
+    </gmd:LI_Lineage>
+  </gmd:lineage>
+  <gmd:resourceConstraints>
+    <gmd:MD_LegalConstraints>
+      <gmd:useConstraints>
+        <gmd:MD_RestrictionCode
+          codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
+          codeListValue="otherRestrictions" />
+      </gmd:useConstraints>
+      <gmd:accessConstraints>
+        <gmd:MD_RestrictionCode
+          codeList="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/ML_gmxCodelists.xml#MD_RestrictionCode"
+          codeListValue="otherRestrictions" />
+      </gmd:accessConstraints>
+      <gmd:otherConstraints>
+        <gmx:Anchor
+          xlink="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a" />
+      </gmd:otherConstraints>
+    </gmd:MD_LegalConstraints>
+  </gmd:resourceConstraints>
+  <gmd:extent>
+    <gmd:EX_GeographicBoundingBox>
+      <gmd:westBoundLongitude>
+        <gco:Decimal>-10.0</gco:Decimal>
+      </gmd:westBoundLongitude>
+      <gmd:eastBoundLongitude>
+        <gco:Decimal>10.0</gco:Decimal>
+      </gmd:eastBoundLongitude>
+      <gmd:southBoundLatitude>
+        <gco:Decimal>-5.0</gco:Decimal>
+      </gmd:southBoundLatitude>
+      <gmd:northBoundLatitude>
+        <gco:Decimal>5.0</gco:Decimal>
+      </gmd:northBoundLatitude>
+    </gmd:EX_GeographicBoundingBox>
+  </gmd:extent>
+  <gmd:distributionInfo>
+    <gmd:MD_Distribution>
+      <gmd:transferOptions>
+        <gmd:MD_DigitalTransferOptions>
+          <gmd:onLine>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>https://example.com/dataset</gmd:URL>
+              </gmd:linkage>
+              <gmd:name>
+                <gco:CharacterString>Example Datase</gco:CharacterString>
+              </gmd:name>
+            </gmd:CI_OnlineResource>
+          </gmd:onLine>
+          <gmd:onLine>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>https://example.com/dataset2</gmd:URL>
+              </gmd:linkage>
+              <gmd:name>
+                <gco:CharacterString>Example Datase 2</gco:CharacterString>
+              </gmd:name>
+            </gmd:CI_OnlineResource>
+          </gmd:onLine>
+        </gmd:MD_DigitalTransferOptions>
+      </gmd:transferOptions>
+    </gmd:MD_Distribution>
+  </gmd:distributionInfo>
+</gmd:MD_Metadata>
