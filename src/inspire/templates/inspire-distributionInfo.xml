@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmd:MD_Metadata xmlns:gmd="http://www.isotc211.org/2005/gmd"
+  xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gmx="http://www.isotc211.org/2005/gmx"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xsi:schemaLocation="http://www.isotc211.org/2005/gmd http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd">
+
+
+  <gmd:distributionInfo>
+    <gmd:MD_Distribution>
+
+      <!--TG
+    Requirement 2.6: metadata/2.0/req/isdss/data-encoding: The encoding and the storage or
+    transmission format of the provided data sets or data set series shall be given using the
+    gmd:distributionFormat/gmd:MD_Format element.
+The multiplicity of this element is 1..*.
+The gmd:name and gmd:version child elements of gmd:MD_Format are mandatory. Both of these elements
+    shall contain Non-empty Free Text Elements.
+If the version of the encoding is unknown or if the encoding is not versioned, the gmd:version
+    shall be left empty and the nil reason attribute shall be provided with either value "unknown"
+    or "inapplicable" correspondingly.-->
+      <gmd:distributionFormat>
+        <gmd:MD_Format>
+          <gmd:name>
+            <gmx:Anchor
+              xlink:href="https://www.iana.org/assignments/media-types/application/gml+xml">
+              gml+xml</gmx:Anchor>
+          </gmd:name>
+          <gmd:version>
+            <gco:CharacterString>3.2.1</gco:CharacterString>
+          </gmd:version>
+        </gmd:MD_Format>
+      </gmd:distributionFormat>
+
+      <!--TG
+    Requirement 1.8: metadata/2.0/req/datasets-and-series/resource-locator: A Resource locator
+    linking to the service(s) providing online access to the described data set or data set series
+    shall be given, if such online access is available.
+If no online access for the data set or data set series is available, but there is a publicly
+    available online resource providing additional information about the described data set or data
+    set series, the URL pointing to this resource shall be given instead.
+These links shall be encoded using
+    gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd:
+    linkage/gmd:URL element.
+The multiplicity of this element is 0..n.-->
+
+      <!-- The two Resource Locator elements are conformant to the Data Service Linking
+    Simplification: Good Practice guidelines
+      (https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification/blob/main/good-practice/data-service-linking-simplification-spec.md)   -->
+      <gmd:transferOptions>
+        <gmd:MD_DigitalTransferOptions>
+          <gmd:onLine>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>
+                  https://geoserver.epsilon-italia.it/geoserver/LU_sample/wms?service=WMS&amp;version=1.3.0&amp;request=GetCapabilities</gmd:URL>
+              </gmd:linkage>
+              <gmd:protocol>
+                <gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wms">OGC Web Map
+                  Service</gmx:Anchor>
+              </gmd:protocol>
+              <gmd:applicationProfile>
+                <gmx:Anchor
+                  xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view">View
+                  Service</gmx:Anchor>
+              </gmd:applicationProfile>
+              <gmd:name>
+                <gco:CharacterString>WMS GetCapabilities request for viewing the data set related to
+                  Land Use</gco:CharacterString>
+              </gmd:name>
+            </gmd:CI_OnlineResource>
+          </gmd:onLine>
+        </gmd:MD_DigitalTransferOptions>
+      </gmd:transferOptions>
+      <gmd:transferOptions>
+        <gmd:MD_DigitalTransferOptions>
+          <gmd:onLine>
+            <gmd:CI_OnlineResource>
+              <gmd:linkage>
+                <gmd:URL>
+                  https://geoserver.epsilon-italia.it/geoserver/LU_sample/ows?service=WFS&amp;version=2.0.0&amp;request=GetCapabilities</gmd:URL>
+              </gmd:linkage>
+              <gmd:protocol>
+                <gmx:Anchor xlink:href="http://www.opengis.net/def/serviceType/ogc/wfs">OGC Web
+                  Feature Service</gmx:Anchor>
+              </gmd:protocol>
+              <gmd:applicationProfile>
+                <gmx:Anchor
+                  xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download">Download
+                  Service</gmx:Anchor>
+              </gmd:applicationProfile>
+              <gmd:name>
+                <gco:CharacterString>WFS GetCapabilities request for downloading the data set
+                  related
+                  to Land Use</gco:CharacterString>
+              </gmd:name>
+            </gmd:CI_OnlineResource>
+          </gmd:onLine>
+        </gmd:MD_DigitalTransferOptions>
+      </gmd:transferOptions>
+    </gmd:MD_Distribution>
+  </gmd:distributionInfo>
+
+</gmd:MD_Metadata>
