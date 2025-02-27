@@ -10,4 +10,4 @@ Note: Before i learned about tools like pygeometa i came to the conclusion that 
 
 ## Future work
 
-- Another required but missing output, which is not implemented yet. It would show Inspire service metadata.
+- Another required but missing output would show Inspire service metadata. The functionality is not implemented yet.
