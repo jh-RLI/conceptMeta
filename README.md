@@ -16,8 +16,9 @@ Generate INSPIRE metadata using the custom implementation in conceptMeta:
 
 - Edit the `src/config/config.yml` file according to your needs
 - Setup a python environment `python -m venv .venv`
+- Activate env `source env/bin/activate`
 - Install the tool uv `pip install uv`
-- Install the project
+- Install the project dependency in the python environment `uv sync`
 
 ## Usage
 
