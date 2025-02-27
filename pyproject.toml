@@ -16,4 +16,7 @@ dependencies = [
     "virtualenv==20.28.0",
     "identify==2.6.3",
     "xmltodict>=0.14.2",
+    "pytest>=8.3.4",
+    "pygeometa>=0.16.1",
+    "xsdata[cli]>=24.12",
 ]
