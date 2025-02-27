@@ -8,6 +8,8 @@ Currently under construction, expect breaking changes. Usage as python library i
 
 The goal is to be able to generate INSPIRE dataset/series metadata as well as service metadata based on the config file/s in `src/config/config.yml`. The config file will hold metadata information based on user input for a single dataset.
 
+You can find pre-generated examples for the outputs in the `output` directory.
+
 ## Installation
 
 Clone this repository.
