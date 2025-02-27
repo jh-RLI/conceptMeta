@@ -4,8 +4,6 @@ integrate them into the Berlin Wärmekataster data pipeline
 to manage metadata, data to support different data versions.
 """
 
-import json
-
 from inspire.extractInspireInfoStrategy import (
     AbstractExtractor,
     DistributionVersionExtractor,
@@ -13,10 +11,10 @@ from inspire.extractInspireInfoStrategy import (
     TitleExtractor,
 )
 from inspire.interface import register_etl_processes_and_create_metadata
+from inspire.xmlWrap.parse import parse_metadata
 from metaRegister.manageEtlInputDatasetsMetadata import (
     collect_metadata_path_for_etl_processes,
 )
-from xmlWrap.parse import parse_metadata, parse_xml_to_dict
 
 
 def main():
@@ -44,8 +42,9 @@ def main():
         context.set_strategy(version_extractor)
         print("Distribution Version:", context.extract(xml_root))
 
-        json_parsed = parse_xml_to_dict(i[1])
-        print(json.dumps(json_parsed))
+        # TODO: Check if xml to dict might ease processing
+        # TODO: Check if dict to xml is stable
+        # parse_xml_to_dict(i[1])
 
     register_etl_processes_and_create_metadata()
 

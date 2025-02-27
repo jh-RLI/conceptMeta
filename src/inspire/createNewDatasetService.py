@@ -8,7 +8,7 @@
 
 from lxml import etree
 
-from xmlWrap.namespaces import namespaces
+from inspire.xmlWrap.namespaces import namespaces
 
 
 def create_root_element() -> etree.Element:

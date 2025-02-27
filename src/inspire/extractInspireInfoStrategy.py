@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 from lxml import etree
 
-from xmlWrap.namespaces import namespaces
+from inspire.xmlWrap.namespaces import namespaces
 
 
 class MetadataExtractor(ABC):
