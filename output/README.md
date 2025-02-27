@@ -1,0 +1,9 @@
+# Results
+
+Currently two implementations are evaluated, which outputs are listed above:
+
+- Pygeometa (external package) can create ISO 19139 XML metadata documents based on the config file in `src/config/pygeometa.yml`.
+
+- conceptMeta: Before i learned about tools like pygeometa i came to the conclusion that there are now libs`s which can produce INSPIRE metadata out of the box. Even Pygeometa will not produce fully schema compliant INSPIRE metadata. (See [TG-INSPIRE](https://knowledge-base.inspire.ec.europa.eu/publications/technical-guidance-implementation-inspire-dataset-and-service-metadata-based-isots-191392007_en))
+
+- Another required but missing output, which is not implemented yet, would show Inspire service metadata describing WMS/WFS
