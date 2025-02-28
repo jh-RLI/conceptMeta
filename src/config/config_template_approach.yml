@@ -1,0 +1,41 @@
+version: 1.0.0 # Version of the complete run
+etl_processes:  # Process scope
+
+  - process_id: test-1  # Unique identifier for the ETL process (string)
+    dataset_name: alkis-gebäude  # Dataset name associated with the process (string)
+    metadata_document_name: insipre-alkis-gebäude  # Name of the metadata document (string)
+    metadata_storage_path: case-study/fisbroker-berlin/ # Path of the metadata document (string) must be a valid filepath // may implement URL based Path
+    create_new_metadata: false  # Whether to create a new metadata document (boolean)
+    add_metadata_content_from:
+      path: /this/path  # Path to file or directory (string). use a template to create the content file. The template provides the INSPIRE metadata structure.
+      type: file  # Specify 'file' or 'directory'
+    file_identifier: dataset-series-id-1
+    inspire_metadata_info:
+      fileIdentifier: "unique-file-id-12345"
+      characterSet: "utf8"
+      dateStamp: "2025-02-28T09:00:00+00:00"
+      citationTitle: "Example INSPIRE Dataset"
+      identifier: "http://example.com/dataset/12345"
+      abstract: "A sample INSPIRE metadata record."
+      contactOrg: "Example Organisation"
+      contactEmail: "contact@example.org"
+      pointOfContactOrg: "Example Data Team"
+      pointOfContactEmail: "data@example.org"
+      creationDate: "2025-02-28"
+      identifierDateTypeCode: "creation"
+      distributionFormatName: "GML"
+      distributionFormatVersion: "3.2"
+      transferProtocol: "WFS"
+      transferAppProfile: "http://example.com/appProfile"
+      transferResourceName: "Online Data Access"
+      transferURL: "http://example.com/data"
+      dataQualityDate: "2025-02-27"
+      dataQualityDateTypeCode: "publication"
+      lineageStatement: "Data compiled from various sources."
+      spatialResolutionDenominator: "1000"
+      westBoundLongitude: "-10.00"
+      eastBoundLongitude: "10.00"
+      southBoundLatitude: "45.00"
+      northBoundLatitude: "55.00"
+      temporalBegin: "2020-01-01"
+      topicCategory: "environment"
