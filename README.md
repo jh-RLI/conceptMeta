@@ -16,7 +16,6 @@ Clone this repository.
 
 Generate INSPIRE metadata using the custom implementation in conceptMeta:
 
-- Edit the `src/config/config.yml` file according to your needs
 - Setup a python environment `python -m venv .venv`
 - Activate env `source env/bin/activate`
 - Install the tool uv `pip install uv`
@@ -24,11 +23,17 @@ Generate INSPIRE metadata using the custom implementation in conceptMeta:
 
 ## Usage
 
+- Edit the `src/config/config.yml` file according to your needs
+
 `uv run src/conceptMeta.py`
 
-For pygeometa run:
+For pygeometa:
+
+- Edit the `src/config/pygeometa.yml` file according to your needs
 
 `uv run pygeometa metadata generate src/config/pygeometa.yml --schema=iso19139`
+
+For both approaches the results will be saved to the output directory. You can change this behavior in `src/settings.py`
 
 ## Technology
 
